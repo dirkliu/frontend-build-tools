@@ -1,0 +1,22 @@
+{
+  "name": "angular-gulp-demo",
+  "version": "1.0.0",
+  "description": "a porject of angular,gulp,",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirkliu/angular-gulp-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dirkliu/angular-gulp-demo/issues"
+  },
+  "homepage": "https://github.com/dirkliu/angular-gulp-demo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
