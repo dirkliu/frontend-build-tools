@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/dirkliu/angular-gulp-demo#readme",
   "devDependencies": {
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-uglify": "^2.0.0"
+  },
+  "dependencies": {
+    "amazeui-react": "^1.2.2"
   }
 }

@@ -1,2 +1,2 @@
 # angular-gulp-demo
-A project of angular,  build with gulp
+A project of react,  build with gulp
