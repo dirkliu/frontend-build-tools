@@ -1,0 +1,22 @@
+:fullscreen a {
+    display: flex;
+}
+
+.op{
+  opacity: 0.5;
+}
+
+.black{
+    background-color: #000;
+    border-radius:5px;
+}
+
+:before{
+    content:'test before';
+}
+
+ul{
+    border:0;
+    margin:0;
+    padding:0;
+}
