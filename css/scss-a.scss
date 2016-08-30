@@ -1,0 +1,16 @@
+*{
+  border:0;
+  padding:0;
+  margin:0;
+}
+
+.a{
+  text-align:center;
+  .b,.c{
+    border:#999;
+  }
+}
+
+.ting{
+  display: inline-block;
+}
