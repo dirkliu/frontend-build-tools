@@ -23,7 +23,7 @@ gulp.task('sass',function(){
 });
 
 gulp.task('html',function(){
-    return gulp.src('*.html')
+    return gulp.src('index.html')
         .pipe(useref())
         .pipe(gulp.dest('dist'))
         .pipe(livereload());
