@@ -6,37 +6,38 @@ var autoprefix =require('gulp-autoprefixer');
 var useref=require('gulp-useref');
 var gulpif=require('gulp-if');
 var sass=require('gulp-sass');
+var livereload=require('gulp-livereload');
 var del=require('del');
-
-gulp.task('default',function(){
-    gulp.src('js/*.js')
-        .pipe(uglify())
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('autoprefix',function(){
-    return gulp.src('css/*.css').pipe(autoprefix({browers:['last 4 versions']})).pipe(gulp.dest('dist/css'));
-});
-
-gulp.task('watch',function(){
-    gulp.watch('css/*.css',['autoprefix']);
-    gulp.watch('css/*.scss',['sass']);
-})
+var http=require('http');
+var st=require('st');
 
 gulp.task('clean', function() {
-    return del(['dist/*']);
-});
-
-gulp.task('html',function(){
-    gulp.src('*.html')
-        .pipe(useref())
-        .pipe(gulpif('*.js',uglify()))
-        .pipe(gulp.dest('dist'));
+    return del(['dist']);
 });
 
 gulp.task('sass',function(){
-    gulp.src('css/*.scss')
+    gulp.src('styles/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/styles'))
+        .pipe(livereload());
 });
+
+gulp.task('html',function(){
+    return gulp.src('*.html')
+        .pipe(useref())
+        .pipe(gulp.dest('dist'))
+        .pipe(livereload());
+});
+
+gulp.task('server',function(done){
+    http.createServer(
+        st({ path: __dirname + '/dist', index: 'index.html', cache: false })
+    ).listen(8080, done);
+});
+
+gulp.task('watch', function() {
+    livereload.listen({ basePath: 'dist' });
+    gulp.watch('styles/*.scss', ['sass']);
+});
+
+gulp.task('serve',['clean','sass','html','server','watch']);
