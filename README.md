@@ -15,3 +15,5 @@ A project of react,  build with gulp
   http://wiki.jikexueyuan.com/project/react-tutorial/jsx-spread-attributes.html
 * gulp中文网
   http://www.gulpjs.com.cn/
+* babel文档
+  https://babeljs.io/docs/setup/#installation
