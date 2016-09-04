@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Demo!</title>
+    <script src="./vendor/react-15.3.1/build/react.min.js"></script>
+    <script src="./vendor/react-15.3.1/build/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="examples"></div>
+<script type="text/babel">
+    var HelloWorld=React.createClass({
+        render:function(){
+            console.log(this.props);
+            return <p className={this.props.className}>hello world!</p>;
+        }
+    });
+
+    ReactDOM.render(
+        <HelloWorld className={'hello'}/>,
+        document.getElementById('examples')
+    );
+</script>
+</body>
+</html>
