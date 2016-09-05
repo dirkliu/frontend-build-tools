@@ -8,12 +8,12 @@ module.exports={
         path:__dirname,
         filename:'bundle.js'
     },
-    resolve:{//指定require
+    /*resolve:{//指定require
         extensions:['','.js','.jsx'] //指定可以被 require 的文件后缀。比如 Hello.jsx 这样的文件就可以直接用 require(./Hello) 引用
     },
     module:{
         loaders:[
             {test:/\.jsx$/,loaders:['jsx?harmony']}
         ]
-    }
+    }*/
 }
