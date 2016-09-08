@@ -9,8 +9,12 @@ A project of react,  build with gulp
 # 资源列表
 * Webpack 中文指南
   http://webpackdoc.com/
+* webpack 官方文档
+  http://webpack.github.io/docs/
 * reactjs文档
   http://reactjs.cn/react/docs/getting-started.html
+* react webpack手册
+  http://webpackdoc.com/reference.html
 * 极客学院react教程
   http://wiki.jikexueyuan.com/project/react-tutorial/jsx-spread-attributes.html
 * gulp中文网
