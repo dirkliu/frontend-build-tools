@@ -17,18 +17,10 @@
   },
   "homepage": "https://github.com/dirkliu/angular-gulp-demo#readme",
   "devDependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-if": "^2.0.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.0",
-    "st": "^1.2.0"
+    "babel-cli": "^6.14.0",
+    "jsx-loader": "^0.13.2",
+    "st": "^1.2.0",
+    "webpack": "^1.13.2"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
