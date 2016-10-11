@@ -4,9 +4,9 @@
 import $ from 'jquery';
 import angular from "angular";
 import ngRoute from "angular-route";
-import "angular-aria";
-import "angular-animate";
-import "angular-local-storage";
+import ngAria from "angular-aria";
+import ngAnimate from "angular-animate";
+import LocalStorageModule from "angular-local-storage";
 import "alertifyjs";
 
 import './app';
