@@ -9,15 +9,15 @@ module.exports={
     },
     module:{
         loaders:[{
-            // HTML LOADER
-            // Reference: https://github.com/webpack/raw-loader
-            // Allow loading html through js
             test: /\.html$/,
             loader: 'html'
         },{
             test:/\.js$/,
             exclude:/node_modules/,
             loader:'babel-loader'
+        },{
+            test: /\.scss$/,
+            loaders: ["style", "css", "sass"]
         }]
     },
     plugins:[

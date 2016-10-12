@@ -9,5 +9,7 @@ import ngAnimate from "angular-animate";
 import LocalStorageModule from "angular-local-storage";
 import "alertifyjs";
 
+import './styles/index.scss';
+
 import './app';
 
