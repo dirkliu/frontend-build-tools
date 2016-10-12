@@ -10,7 +10,7 @@ module.exports={
     module:{
         loaders:[{
             test: /\.html$/,
-            loader: 'html'
+            loader: 'raw'
         },{
             test:/\.js$/,
             exclude:/node_modules/,
