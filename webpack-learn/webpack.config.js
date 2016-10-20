@@ -7,6 +7,7 @@ module.exports={
         path:'./bin',
         filename:'app.bundle.js'
     },
+
     module:{
         loaders:[{
             test: /\.html$/,
@@ -20,6 +21,7 @@ module.exports={
             loaders: ["style", "css", "sass"]
         }]
     },
+
     plugins:[
         new HtmlWebpackPlugin({
             template:'./index.html'
@@ -32,5 +34,12 @@ module.exports={
                 comments: false,
             }
         })
-    ]
+    ],
+
+    devServer:{
+        contentBase:'./bin',
+        port:8000,
+        inline:false,
+        open:'http://localhost:8000/#/'
+    }
 }
