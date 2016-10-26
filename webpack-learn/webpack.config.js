@@ -5,7 +5,8 @@ module.exports={
     entry:'./src/entry.js',
     output:{
         path:'./bin',
-        filename:'app.bundle.js'
+        filename:'[name].[hash].js',
+        chunkFilename:'[name].[hash].js'
     },
 
     module:{
@@ -18,7 +19,10 @@ module.exports={
             loader:'babel-loader'
         },{
             test: /\.scss$/,
-            loaders: ["style", "css", "sass"]
+            loaders: ["style", "css", "resolve-url","sass"]
+        },{
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            loader: 'url!resolve-url!img?progressive=true'
         }]
     },
 
@@ -39,7 +43,7 @@ module.exports={
     devServer:{
         contentBase:'./bin',
         port:8000,
-        inline:false,
+        inline:true,
         open:'http://localhost:8000/#/'
     }
 }
