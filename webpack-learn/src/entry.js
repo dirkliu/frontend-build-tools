@@ -1,13 +1,7 @@
-/**
- * 使用babel-loader转换es2015
- */
-import $ from 'jquery';
-import angular from "angular";
-import ngRoute from "angular-route";
-import "angular-aria";
-import "angular-animate";
-import "angular-local-storage";
-import "alertifyjs";
-
-import './app';
-
+var a = require("./a");
+var b = require("./b");
+require.ensure(["./c"], function(require) {
+    require("./b").xyz();
+    var d = require("./d");
+    console.log('d:',d);
+});
