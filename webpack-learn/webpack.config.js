@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports={
     entry:'./src/entry.js',
     output:{
-        path:'./bin',
+        path:'./dist',
         filename:'[name].[hash].js',
         chunkFilename:'[name].[hash].js'
     },
