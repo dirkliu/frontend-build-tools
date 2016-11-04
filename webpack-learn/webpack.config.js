@@ -2,7 +2,10 @@ var webpack=require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports={
-    entry:'./src/entry.js',
+    entry:{
+        'entry0':'./src/entry0.js',
+        'entry1':'./src/entry1.js'
+    },
     output:{
         path:'./dist',
         filename:'[name].[hash].js',
@@ -37,7 +40,8 @@ module.exports={
             output: {
                 comments: false,
             }
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin("init.js")
     ],
 
     devServer:{
