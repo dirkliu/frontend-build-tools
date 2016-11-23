@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var autoprefix =require('gulp-autoprefixer');
-var useref=require('gulp-useref');
 var gulpif=require('gulp-if');
 var sass=require('gulp-sass');
 var livereload=require('gulp-livereload');
@@ -24,7 +23,6 @@ gulp.task('sass',function(){
 
 gulp.task('html',function(){
     return gulp.src('index.html')
-        .pipe(useref())
         .pipe(gulp.dest('dist'))
         .pipe(livereload());
 });
