@@ -1,7 +1,7 @@
 {
   "name": "gulp-demo",
   "version": "1.0.0",
-  "description": "a porject of angular,gulp,",
+  "description": "a gulp build demo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,8 +21,10 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
     "gulp-if": "^2.0.1",
     "gulp-livereload": "^3.8.1",
+    "gulp-open": "^2.0.0",
     "gulp-react": "^3.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
