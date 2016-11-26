@@ -1,4 +1,4 @@
-# angular-gulp-demo
+# Webpack&Gulp&React
 A project of react,  build with gulp
 * 全局安装gulp
   npm install gulp -g
