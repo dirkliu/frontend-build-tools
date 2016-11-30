@@ -4,7 +4,7 @@
   "description": "a porject of angular,gulp,",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -31,12 +31,12 @@
     "node-sass": "^3.10.1",
     "raw-loader": "^0.5.1",
     "resolve-url-loader": "^1.6.0",
+    "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
