@@ -41,7 +41,8 @@ module.exports={
                 comments: false,
             }
         }),
-        new webpack.optimize.CommonsChunkPlugin("init.js")
+        new webpack.optimize.CommonsChunkPlugin("init.js"),
+        new webpack.HotModuleReplacementPlugin()
     ],
 
     devServer:{
@@ -49,5 +50,6 @@ module.exports={
         port:8000,
         inline:true,
         open:'http://localhost:8000/#/'
-    }
+    },
+    devtool:"eval"
 }
