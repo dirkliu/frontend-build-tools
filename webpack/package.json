@@ -4,7 +4,8 @@
   "description": "a porject of angular,gulp,",
   "main": "index.js",
   "scripts": {
-    "dev":"webpack-dev-server"
+    "build":"webpack",
+    "dev":"webpack-dev-server --config webpack.config.dev.js --inline"
   },
   "repository": {
     "type": "git",
