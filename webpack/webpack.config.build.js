@@ -3,8 +3,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports={
     entry:{
-        'entry0':'./src/entry0.js',
-        'entry1':'./src/entry1.js'
+        'index':['./src/entry0.js','./src/entry1.js'],
+        'app':['./src/entry0.js']
     },
     output:{
         path:'./dist',
@@ -31,7 +31,14 @@ module.exports={
 
     plugins:[
         new HtmlWebpackPlugin({
-            template:'./index.html'
+            filename:'index.html',
+            template:'./index.html',
+            title:'index'
+        }),
+        new HtmlWebpackPlugin({
+            filename:'article.html',
+            template:'./article.html',
+            title:'article'
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {

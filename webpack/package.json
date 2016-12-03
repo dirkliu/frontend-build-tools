@@ -4,7 +4,7 @@
   "description": "a porject of angular,gulp,",
   "main": "index.js",
   "scripts": {
-    "build":"webpack",
+    "build":"rimraf dist && webpack --config webpack.config.build.js",
     "dev":"webpack-dev-server --config webpack.config.dev.js --inline"
   },
   "repository": {
