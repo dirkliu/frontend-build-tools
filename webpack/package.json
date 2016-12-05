@@ -4,8 +4,8 @@
   "description": "a porject of angular,gulp,",
   "main": "index.js",
   "scripts": {
-    "build":"webpack",
-    "dev":"webpack-dev-server --config webpack.config.dev.js --inline"
+    "build": "rimraf dist && webpack --config webpack.config.build.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --inline"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "resolve-url-loader": "^1.6.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
+    "shelljs": "^0.7.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
