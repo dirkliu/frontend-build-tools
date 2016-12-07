@@ -1,6 +1,11 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var fs=require('fs');
 
+fs.writeFileSync('./src/a.js',fs.readFileSync('./src/a.js').toString().replace(/__CONSTANT_A/g,'It\\\'s a!'));
+//fs.writeFileSync('./test.js',a);
+
+//module.exports={}
 module.exports = {
     entry: {
         'index': ['./src/a.js', './src/b.js', './src/common.js'],
