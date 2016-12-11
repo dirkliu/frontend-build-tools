@@ -1,3 +1,3 @@
 import "./b";
-//import "./common";
-//console.log('index page!');
+import "./common";
+console.log('index page!');

@@ -55,7 +55,11 @@ module.exports = {
          comments: false,
          }
          }),*/
-        new ConstantsReplacePlugin(),
+        new ConstantsReplacePlugin({
+             holders:{
+
+             }
+        }),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js')
     ]
 }
