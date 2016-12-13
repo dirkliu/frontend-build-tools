@@ -41,7 +41,10 @@ ConstantsReplacePlugin.prototype.apply = function(compiler) {
         };
 
         compilation.chunks.forEach(function(chunk){
-            console.log('chunk:',chunk);
+            console.log('chunk:',chunk.files);
+            chunk.files.forEach(function(file){
+                console.log('file:',file);
+            });
             //chunk.replace(/__CONSTANT_A/g,'I changed it');
         });
 
