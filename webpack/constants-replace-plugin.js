@@ -6,6 +6,7 @@ ConstantsReplacePlugin.prototype.apply = function(compiler) {
 
     compiler.plugin("compile", function(params) {
         //console.log("The compiler is starting to compile...:");
+        console.log('param:',params);
     });
 
     compiler.plugin("compilation", function(compilation) {
@@ -20,7 +21,7 @@ ConstantsReplacePlugin.prototype.apply = function(compiler) {
     });
 
     compiler.plugin('emit', function(compilation, callback) {
-        console.log('compilier emit',compilation.assets);
+        //console.log('compilier emit',compilation.assets);
         // Create a header string for the generated file:
         var filelist = 'In this build:\n\n';
 
@@ -41,9 +42,9 @@ ConstantsReplacePlugin.prototype.apply = function(compiler) {
         };
 
         compilation.chunks.forEach(function(chunk){
-            console.log('chunk:',chunk.files);
+            //console.log('chunk:',chunk.files);
             chunk.files.forEach(function(file){
-                console.log('file:',file);
+                //console.log('file:',file);
             });
             //chunk.replace(/__CONSTANT_A/g,'I changed it');
         });
@@ -52,7 +53,7 @@ ConstantsReplacePlugin.prototype.apply = function(compiler) {
     });
 
     compiler.plugin('done', function() {
-        console.log('Welcome,constants-replace-compiler done!');
+        //console.log('Welcome,constants-replace-compiler done!');
     });
 };
 
