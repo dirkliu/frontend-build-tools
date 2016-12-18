@@ -1,6 +1,18 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ConstantsReplacePlugin=require('./constants-replace-plugin');
+
+require('shelljs/global');
+if (!which('git')) {
+    echo('Sorry, this script requires git');
+    exit(1);
+}
+
+var branch=exec('git branch');
+if(branch.indexOf('master')){
+    var branch="'master'";
+}else{
+    var branch="'copy'";
+}
 
 module.exports = {
     entry: {
@@ -55,10 +67,9 @@ module.exports = {
          comments: false,
          }
          }),*/
-        new ConstantsReplacePlugin({
-             holders:{
 
-             }
+        new webpack.DefinePlugin({
+            CONSTANT_A:branch
         }),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js')
     ]

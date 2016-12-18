@@ -9,7 +9,9 @@ if (!which('git')) {
 
 var branch=exec('git branch');
 if(branch.indexOf('master')){
-    console.log('It is master!');
+    var branch="'master'"
+}else{
+    var branch="'copy'"
 }
 
 module.exports = {
@@ -66,6 +68,9 @@ module.exports = {
          comments: false,
          }
          }),*/
+        new webpack.DefinePlugin({
+            CONSTANT_A:branch
+        }),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js'),
         new webpack.HotModuleReplacementPlugin()
     ],

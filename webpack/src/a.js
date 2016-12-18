@@ -1,2 +1,1 @@
-var a='__CONSTANT_A';
-console.log(a);
+console.log(CONSTANT_A);
