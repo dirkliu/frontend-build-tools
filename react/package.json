@@ -1,0 +1,21 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "description": "A demo of react.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "7ge",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
