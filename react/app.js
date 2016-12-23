@@ -1,3 +1,4 @@
-/**
- * Created by Administrator on 2016/12/23.
- */
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render('test a demo', document.getElementById('example'));

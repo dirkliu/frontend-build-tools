@@ -4,7 +4,7 @@
   "description": "A demo of react.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --port 8000 --inline"
   },
   "keywords": [
     "react"
@@ -12,9 +12,15 @@
   "author": "7ge",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.4",
+    "html-webpack-plugin": "^2.24.1",
     "webpack": "^1.14.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.20.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }
