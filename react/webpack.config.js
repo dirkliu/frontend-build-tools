@@ -1,20 +1,20 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = {
     entry: './app.js',
 
-    loaders: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel-loader",
-            query: {
-                presets: ['react', 'es2015']
-            }
-        }
-    ],
+    output:{
+        path: './dist',
+        filename: '[name].[hash].js',
+        chunkFilename: '[name].[hash].js'
+    },
+
+    module: {
+        loaders: [
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+        ]
+    },
 
     plugins:[
         new HtmlWebpackPlugin({
