@@ -1,9 +1,12 @@
 # Webpack&Gulp&React
 A project of react,  build with gulp
-* 全局安装gulp
-  npm install gulp -g
-* 全局安装webpack
-  npm install webpack -g
+# 开发工具安装
+ * 全局安装gulp ` npm install gulp -g`
+ * 全局安装webpack ` npm install webpack -g`
+# node依赖安装
+  ` npm install`
+# 运行
+ ` npm run dev`
 
 
 # 资源列表
