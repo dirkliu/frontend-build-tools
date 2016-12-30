@@ -47,14 +47,14 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './index.html',
+            template: './src/index.html',
             title: 'Index page',
             favicon: './favicon.ico',
             chunks: ['vendor', 'index']
         }),
         new HtmlWebpackPlugin({
             filename: 'article.html',
-            template: './article.html',
+            template: './src/article.html',
             title: 'Article page',
             favicon: './favicon.ico',
             chunks: ['vendor', 'article']
