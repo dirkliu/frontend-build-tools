@@ -15,14 +15,14 @@ gulp.task('clean', function () {
 });
 
 gulp.task('sass', function () {
-    gulp.src('styles/*.scss')
+    gulp.src('src/styles/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/styles'))
         .pipe(connect.reload());
 });
 
 gulp.task('html', function () {
-    return gulp.src('index.html')
+    return gulp.src('src/index.html')
         .pipe(gulp.dest('dist'))
         .pipe(connect.reload());
 });
@@ -35,12 +35,12 @@ gulp.task('server', function (done) {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('styles/*.scss', ['sass']);
-    gulp.watch('*.html', ['html']);
+    gulp.watch('src/styles/*.scss', ['sass']);
+    gulp.watch('src/*.html', ['html']);
 });
 
 gulp.task('open', function () {
-    gulp.src('./')
+    gulp.src('src/')
         .pipe(open({
             uri:'http://localhost:8080',
             app:'chrome'
