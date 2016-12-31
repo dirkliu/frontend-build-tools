@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './app.js',
+    entry: './src/app.js',
 
     output:{
         path: './dist',
@@ -23,7 +23,7 @@ module.exports = {
     plugins:[
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './index.html',
+            template: './src/index.html',
             favicon: './favicon.ico'
         })
     ],
