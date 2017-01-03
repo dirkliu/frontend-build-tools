@@ -1,36 +1,33 @@
+import 'antd/dist/antd.min.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { DatePicker, message } from 'antd';
 
-class Clock extends React.Component {
-    constructor(props) {
+class App extends React.Component{
+    constructor(props){
         super(props);
-        this.state = {date: new Date()};
+        this.state={
+            date:''
+        }
     }
 
-    render() {
+    handleChange(date){
+        message.info('您选择的日期是: ' + date.toString());
+        this.setState({ date });
+    }
+
+    render(){
         return (
             <div>
-                <h1>Hello,World!</h1>
-                <h2>现在是：{this.state.date.toLocaleString()}</h2>
+                <DatePicker onChange={value => this.handleChange(value)} />
+                <div style={{ marginTop: 20 }}>当前日期：{this.state.date.toString()}</div>
             </div>
-        )
-    }
-
-    componentDidMount() {
-        var _this = this;
-        this.timerId = setInterval(() => {
-            _this.setState({
-                date: new Date()
-            })
-        }, 1000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timerId);
+        );
     }
 }
 
 ReactDOM.render(
-    <Clock/>,
+    <App/>,
     document.getElementById('app')
 );
