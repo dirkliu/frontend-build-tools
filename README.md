@@ -1,9 +1,12 @@
 # Webpack&Gulp&React
 A project of react,  build with gulp
-* 全局安装gulp
-  npm install gulp -g
-* 全局安装webpack
-  npm install webpack -g
+# 开发工具安装
+ * 全局安装gulp ` npm install gulp -g`
+ * 全局安装webpack ` npm install webpack -g`
+# node依赖安装
+  ` npm install`
+# 运行
+ ` npm run dev`
 
 
 # 资源列表
@@ -23,4 +26,6 @@ A project of react,  build with gulp
   https://babeljs.io/docs/setup/#installation
 * webpack多页应用架构专题系列
   http://array_huang.coding.me/webpack-book/
+* antDesign--Ant Design 的 React 实现，开发和服务于企业级后台产品
+  https://ant.design/docs/react/introduce-cn
 

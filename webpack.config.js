@@ -13,6 +13,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test:/\.css$/,
+                loader:"style-loader!css-loader"
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
@@ -25,7 +29,8 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html',
             favicon: './favicon.ico'
-        })
+        })/*,
+        new webpack.optimize.DedupePlugin()*/
     ],
 
     devServer:{
