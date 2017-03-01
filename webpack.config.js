@@ -1,3 +1,4 @@
+var path=require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -5,7 +6,7 @@ module.exports = {
     entry: './src/app.js',
 
     output:{
-        path: './dist',
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].js'
     },
@@ -31,11 +32,11 @@ module.exports = {
             favicon: './favicon.ico'
         })/*,
         new webpack.optimize.DedupePlugin()*/
-    ],
+    ]
 
-    devServer:{
+    /*devServer:{
         contentBase: './dist',
         port: 8000,
         open: 'http://localhost/#/'
-    }
+    }*/
 }
