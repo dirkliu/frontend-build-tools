@@ -32,11 +32,20 @@ module.exports = {
             favicon: './favicon.ico'
         })/*,
         new webpack.optimize.DedupePlugin()*/
-    ]
+    ],
 
-    /*devServer:{
-        contentBase: './dist',
-        port: 8000,
-        open: 'http://localhost/#/'
-    }*/
+    devServer: {
+        contentBase: path.join(__dirname),
+        port:80,
+        open: true,
+        inline:true,
+        proxy: {
+            "/zhutiapi/**/*": {
+                target: "http://api.zhuti.qiku.com",
+                pathRewrite: {"^/zhutiapi" : ""},
+                changeOrigin: true,
+                secure: false
+            }
+        }
+    }
 }
