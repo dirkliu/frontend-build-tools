@@ -27,7 +27,7 @@ module.exports = {
     },
 
     module: {
-        loaders: [
+        rules: [
             /*{
                 test: /\.html$/,
                 loader: 'raw'
