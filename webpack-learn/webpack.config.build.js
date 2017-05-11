@@ -18,7 +18,7 @@ module.exports = {
     entry: {
         'index': './src/index.js',
         'article': './src/article.js',
-        'vendor': ['./src/common.js']
+        'vendor': './src/common.js'
     },
     output: {
         path: './dist',
@@ -71,6 +71,6 @@ module.exports = {
         new webpack.DefinePlugin({
             CONSTANT_A:branch
         }),
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js')
+        //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js')
     ]
 }

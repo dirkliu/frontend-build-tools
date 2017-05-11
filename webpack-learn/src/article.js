@@ -1,5 +1,2 @@
-import "./a";
-import "./common";
-import "./test";
-import "./test";
+//import "./common";
 console.log('article page!');

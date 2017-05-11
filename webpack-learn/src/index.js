@@ -1,3 +1,2 @@
-import "./b";
-import "./common";
+//import "./common";
 console.log('index page!');

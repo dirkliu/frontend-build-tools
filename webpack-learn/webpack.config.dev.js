@@ -16,7 +16,7 @@ if(branch.indexOf('master')){
 
 module.exports = {
     entry: {
-        'index': ['./src/a.js', './src/b.js', './src/common.js'],
+        'index': ['./src/index.js'],
         'article': './src/article.js',
         'vendor': ['./src/common.js']
     },
