@@ -1,12 +1,11 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-webpack(
-  {
+webpack({
       entry: {
-          'index': ['./src/index.js'],
+          'index': './src/index.js',
           'article': './src/article.js',
-          'vendor': ['./src/common.js']
+          'vendor': './src/common.js'
       },
       output: {
           path: './dist',
@@ -15,11 +14,11 @@ webpack(
       },
 
       module: {
-          rules: [
+          loaders: [
               /*{
                   test: /\.html$/,
                   loader: 'raw'
-              }*/, {
+              }, */{
                   test: /\.js$/,
                   exclude: /node_modules/,
                   loader: 'babel-loader'
@@ -29,21 +28,20 @@ webpack(
               }, {
                   test: /\.(jpe?g|png|gif|svg)$/i,
                   loader: 'url!resolve-url!img?progressive=true'
-              }
-          ]
+              }]
       },
 
       plugins: [
           new HtmlWebpackPlugin({
               filename: 'index.html',
-              template: './index.html',
+              template: './src/index.html',
               title: 'Index page',
               favicon: './favicon.ico',
               chunks: ['vendor', 'index']
           }),
           new HtmlWebpackPlugin({
               filename: 'article.html',
-              template: './article.html',
+              template: './src/article.html',
               title: 'Article page',
               favicon: './favicon.ico',
               chunks: ['vendor', 'article']
@@ -56,19 +54,21 @@ webpack(
            comments: false,
            }
            }),*/
-          new webpack.DefinePlugin({
-              CONSTANT_A:branch
-          }),
-          new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js'),
-          new webpack.HotModuleReplacementPlugin()
-      ],
 
-      devServer: {
-          contentBase: './bin',
-          port: 8000,
-          inline: true,
-          open: 'http://localhost:8000/#/'
-      },
-      devtool: "eval"
+          new webpack.DefinePlugin({
+              CONSTANT_A:"test_branch"
+          }),
+          //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js')
+      ]
+  }, (err, stats) => {
+    if (err || stats.hasErrors()) {
+      console.error(err);
+      return;
+    }
+
+    console.log(stats.toString({
+      chunks: false,  // 使构建过程更静默无输出
+      colors: true    // 在控制台展示颜色
+    }));
   }
 )
