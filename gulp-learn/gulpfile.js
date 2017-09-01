@@ -9,6 +9,7 @@ var del = require('del');
 var st = require('st');
 var connect=require('gulp-connect');
 var open = require('gulp-open');
+var proxy = require('http-proxy-middleware');
 
 gulp.task('clean', function () {
     return del(['dist']);
@@ -27,10 +28,24 @@ gulp.task('html', function () {
         .pipe(connect.reload());
 });
 
+gulp.task('json', function () {
+  return gulp.src('src/test.json')
+    .pipe(gulp.dest('dist'))
+    .pipe(connect.reload())
+});
+
 gulp.task('server', function (done) {
     connect.server({
         root:'dist',
-        livereload: true
+        livereload: true,
+        middleware: function (connect, opt) {
+          return [
+            proxy('/**/*.action', {
+              target: 'http://test.ad.npms.360os.qihoo.net',
+              changeOrigin:true
+            })
+          ]
+        }
     });
 });
 
@@ -47,4 +62,4 @@ gulp.task('open', function () {
         }))
 });
 
-gulp.task('serve', ['clean', 'sass', 'html', 'server','open','watch']);
+gulp.task('serve', ['clean', 'sass', 'json', 'html', 'server','open','watch']);
