@@ -41,7 +41,7 @@ gulp.task('server', function (done) {
         middleware: function (connect, opt) {
           return [
             proxy('/**/*.action', {
-              target: 'http://test.ad.npms.360os.qihoo.net',
+              target: 'http://dangerous.com',
               changeOrigin:true
             })
           ]
