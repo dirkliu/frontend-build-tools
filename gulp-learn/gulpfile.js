@@ -63,3 +63,15 @@ gulp.task('open', function () {
 });
 
 gulp.task('serve', ['clean', 'sass', 'json', 'html', 'server','open','watch']);
+
+
+
+
+gulp.task('demo-concat', function () {
+  return gulp.src('demo/*.js').pipe(concat('test.js')).pipe(gulp.dest('./demo-dist/'))
+})
+
+gulp.task('demo-min', ['demo-concat'], function () {
+    gulp.src('demo-dist/*.js').pipe(uglify()).pipe(gulp.dest('./demo-dist/'))
+})
+gulp.task('demo', ['demo-concat', 'demo-min'])

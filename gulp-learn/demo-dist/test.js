@@ -1,0 +1,1 @@
+console.log("this is a.js"),console.log("this is a.js 1"),console.log("this is a.js 2"),console.log("this is a.js 3"),console.log("this is b.js"),console.log("this is b.js 1"),console.log("this is b.js 2"),console.log("this is b.js 3");
