@@ -1,0 +1,71 @@
+Arguments: 
+  D:\developtools\nodejs\node.exe D:\developtools\yarn\bin\yarn.js add webpack global
+
+PATH: 
+  C:\Users\liuqi1-os\bin;D:\developtools\Git\mingw64\bin;D:\developtools\Git\usr\local\bin;D:\developtools\Git\usr\bin;D:\developtools\Git\usr\bin;D:\developtools\Git\mingw64\bin;D:\developtools\Git\usr\bin;C:\Users\liuqi1-os\bin;D:\developtools\xshell6破解版\xshell6;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;D:\php;D:\developtools\Git\usr\bin;C:\Program Files\Java\jdk1.8.0_144\bin;D:\developtools\apache-maven-3.3.9\bin;D:\developtools\go\bin;D:\developtools\Microsoft VS Code\bin;D:\developtools\python;D:\developtools\python\Scripts;D:\developtools\yarn\bin;D:\developtools\nvm;D:\developtools\nodejs;D:\developtools\go\bin;C:\Users\liuqi1-os\AppData\Local\Programs\Fiddler;C:\Users\liuqi1-os\AppData\Local\Yarn\bin;D:\developtools\nvm;D:\developtools\nodejs;D:\developtools\Git\usr\bin\vendor_perl;D:\developtools\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, lstat 'D:\projects-github\frontend-build-tools\webpack\node_modules\unset-value\node_modules\has-value\node_modules'
+
+npm manifest: 
+  {
+    "name": "webpack-demo",
+    "version": "1.0.0",
+    "description": "a porject of angular,gulp,",
+    "main": "index.js",
+    "scripts": {
+      "build": "rimraf dist && webpack --config webpack.config.build.js",
+      "dev": "webpack-dev-server --config webpack.config.dev.js --inline"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/dirkliu/angular-gulp-demo.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/dirkliu/angular-gulp-demo/issues"
+    },
+    "homepage": "https://github.com/dirkliu/angular-gulp-demo#readme",
+    "devDependencies": {
+      "babel-cli": "^6.14.0",
+      "babel-core": "^6.21.0",
+      "babel-loader": "^6.2.10",
+      "babel-preset-env": "^1.4.0",
+      "css-loader": "^0.25.0",
+      "file-loader": "^0.9.0",
+      "html-loader": "^0.4.4",
+      "html-webpack-plugin": "^2.22.0",
+      "img-loader": "^1.3.1",
+      "jsx-loader": "^0.13.2",
+      "lodash": "^4.17.4",
+      "manifest-revision-webpack-plugin": "^0.3.0",
+      "node-sass": "^4.14.1",
+      "raw-loader": "^0.5.1",
+      "resolve-url-loader": "^1.6.0",
+      "rimraf": "^2.5.4",
+      "sass-loader": "^10.0.2",
+      "shelljs": "^0.7.5",
+      "style-loader": "^0.13.1",
+      "url-loader": "^0.5.7",
+      "webpack": "^4.44.1",
+      "webpack-cli": "^3.3.12",
+      "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

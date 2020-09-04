@@ -30,16 +30,17 @@
     "jsx-loader": "^0.13.2",
     "lodash": "^4.17.4",
     "manifest-revision-webpack-plugin": "^0.3.0",
-    "node-sass": "^3.10.1",
+    "node-sass": "^4.14.1",
     "raw-loader": "^0.5.1",
     "resolve-url-loader": "^1.6.0",
     "rimraf": "^2.5.4",
-    "sass-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
     "shelljs": "^0.7.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {}
 }
