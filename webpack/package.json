@@ -1,14 +1,10 @@
 {
-  "name": "webpack",
+  "name": "webpack-learn",
   "version": "1.0.0",
-  "description": "webpack build demos",
-  "priovate": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -v"
-  },
-  "author": "dirkliu",
-  "license": "ISC",
+  "description": "webpack learn ",
+  "main": "index.js",
+  "author": "Jason",
+  "license": "MIT",
   "devDependencies": {
     "lodash": "^4.17.20",
     "webpack": "^4.44.1",
