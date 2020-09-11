@@ -4,6 +4,9 @@
   "description": "rollup learn, demos",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "node build.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
