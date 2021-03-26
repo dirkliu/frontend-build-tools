@@ -19,6 +19,6 @@ grunt， gulp, rollup, webpack, browserify, typescript, Snowpack, Vite, Parcel
 * typescript: https://www.tslang.cn/docs/home.html  
 * browserify: http://browserify.org/ 
 * Snowpack: https://www.snowpack.dev/#what-is-snowpack%3F  
-* Vite: https://www.snowpack.dev/#what-is-snowpack%3F  
+* Vite: https://vitejs.dev  
 * Parcel: https://www.parceljs.cn/getting_started.html
 
