@@ -1,4 +1,4 @@
-module.exports = function myTest () {
+export default function myTest (options) {
   return {
     name: 'my-test',
     options (ops) {
@@ -20,5 +20,5 @@ module.exports = function myTest () {
     //   console.log('id:', id)
     //   return 'export default 8'
     // }
-  }
+  } 
 }
