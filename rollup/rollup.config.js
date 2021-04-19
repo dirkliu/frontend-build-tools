@@ -5,7 +5,11 @@ const config = {
   input: 'src/index.js',
   output: {
     dir: 'dist',
-    format: 'esm'
+    format: 'esm',
+    banner: '// I am a banner',
+    footer:'// I am a footer',
+    outro: '// I am a outro',
+    intro: '// I am a intro'
   },
   plugins: [
     babel({ babelHelpers: 'bundled' }),

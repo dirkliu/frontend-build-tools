@@ -2,9 +2,9 @@
 //   console.log('name:', name)
 // }
 // a('test')
-let mod = './a'
+// let mod = './a'
 import svg from './test.svg'
-import(mod).then(({a}) => {
+import('./a').then(({a}) => {
   a('I am a')
 })
 
