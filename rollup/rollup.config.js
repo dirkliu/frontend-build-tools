@@ -17,6 +17,6 @@ const config = {
       include: /\.svg/
     })
   ]
-};
+}
 
-export default config;
+export default config

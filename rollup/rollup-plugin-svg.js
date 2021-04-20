@@ -77,10 +77,10 @@ export default function svg (options = {}) {
     },
 
     renderDynamicImport ({format, moduleId, targetModuleId, customResolution}) {
-      console.log('renderDynamicImport format:', format)
-      console.log('renderDynamicImport moduleId:', moduleId)
-      console.log('renderDynamicImport targetModuleId:', targetModuleId)
-      console.log('renderDynamicImport customResolution:', customResolution)
+      // console.log('renderDynamicImport format:', format)
+      // console.log('renderDynamicImport moduleId:', moduleId)
+      // console.log('renderDynamicImport targetModuleId:', targetModuleId)
+      // console.log('renderDynamicImport customResolution:', customResolution)
       return null
     },
 
@@ -94,6 +94,31 @@ export default function svg (options = {}) {
     resolveFileUrl({fileName}) {
       console.log('resolveFileUrl:', fileName)
       return `new URL('${fileName}', document.baseURI).href`;
+    },
+
+    resolveImportMeta (property, {chunkId, moduleId, format}) {
+      // console.log('resolveImportMeta property:', property)
+      // console.log('resolveImportMeta chunkId:', chunkId)
+      // console.log('resolveImportMeta moduleId:', moduleId)
+      // console.log('resolveImportMeta format:', format)
+      return null
+    },
+
+    renderChunk (code, chunk, options) {
+      // console.log('renderChunk code:', code)
+      // console.log('renderChunk chunk:', chunk)
+      // console.log('renderChunk options:', options)
+      return null
+    },
+
+    generateBundle (options, bundle) {
+      // console.log('generateBundle options:', options)
+      // console.log('generateBundle bundle:', bundle)
+    },
+
+    writeBundle (options, bundle) {
+      console.log('writeBundle options:', options)
+      console.log('writeBundle bundle:', bundle)
     }
   } 
 }
