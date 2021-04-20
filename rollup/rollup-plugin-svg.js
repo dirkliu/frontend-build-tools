@@ -9,9 +9,20 @@ export default function svg (options = {}) {
     //   return ops
     // },
 
-    // buildStart (source) {
-    //   // console.log('buildStart source:', source)
-    // },
+    buildStart (source) {
+      // console.log('buildStart source:', source)
+     this.emitFile({
+        type: 'asset',
+        fileName: 'src/test.svg',
+        source: `
+          dddd
+        `
+      })
+      this.emitFile({
+        type: 'chunk',
+        id: 'src/a'
+      })
+    },
 
     resolveId (source, importer) {
       // console.log('resolveId source:', source)
