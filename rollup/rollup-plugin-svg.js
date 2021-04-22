@@ -38,10 +38,14 @@ export default function svg (options = {}) {
     transform (code, id) {
       // console.log('code:', code)
       if (!filter(id)) return null
-      return `
-        const name = 'It is a svg: ${code}'
-        export default name
+      let gencode = `
+      const name = 'It is a svg: ${code}'
+      export default name
       `
+      let ast = this.parse('1 + 1')
+      console.log('ast:', ast)
+      console.log('ast.body[0].expression:', ast.body[0].expression)
+      return gencode
     },
 
     moduleParsed (module) {
@@ -103,7 +107,7 @@ export default function svg (options = {}) {
     },
 
     resolveFileUrl({fileName}) {
-      console.log('resolveFileUrl:', fileName)
+      // console.log('resolveFileUrl:', fileName)
       return `new URL('${fileName}', document.baseURI).href`;
     },
 
@@ -128,8 +132,8 @@ export default function svg (options = {}) {
     },
 
     writeBundle (options, bundle) {
-      console.log('writeBundle options:', options)
-      console.log('writeBundle bundle:', bundle)
+      // console.log('writeBundle options:', options)
+      // console.log('writeBundle bundle:', bundle)
     }
   } 
 }
