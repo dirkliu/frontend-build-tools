@@ -4,9 +4,9 @@ interface Person {
 }
 
 function greeter(person: Person):string{
-  return "Hello, " + person.firstName + " " + person.lastName;
+  return "Hello, " + person.firstName + " " + person.lastName
 }
 
-var user = { firstName: "Jane", lastName: "User" };
+var user = { firstName: "Jane", lastName: "User" }
 
-document.body.innerHTML = greeter(user);
+document.body.innerHTML = greeter(user)

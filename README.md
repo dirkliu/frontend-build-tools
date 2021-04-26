@@ -16,9 +16,9 @@ grunt， gulp, rollup, webpack, browserify, typescript, Snowpack, Vite, Parcel
 * yarn：https://classic.yarnpkg.com/zh-Hans/docs  
 * Typescript官方文档: https://www.tslang.cn/docs/home.html  
 * rollup中文文档: https://www.rollupjs.com  
-* typescript: https://www.tslang.cn/docs/home.html  
 * browserify: http://browserify.org/ 
 * Snowpack: https://www.snowpack.dev/#what-is-snowpack%3F  
 * Vite: https://vitejs.dev  
-* Parcel: https://www.parceljs.cn/getting_started.html
+* Parcel: https://www.parceljs.cn/getting_started.html 
+* Esbuild: https://esbuild.github.io/getting-started/
 
